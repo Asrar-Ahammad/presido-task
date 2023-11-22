@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IoSearchSharp } from 'react-icons/io5';
 import { IoClose } from 'react-icons/io5';
 import { MdArrowDropDown } from 'react-icons/md';
@@ -28,7 +28,7 @@ const Header = () => {
                         <IoClose />
                     </div>
                     <ul className=''>
-                        <li className='m-3 font-medium text-md'><a href="http://" target="_blank" rel="noopener noreferrer">Fou you</a></li>
+                        <li className='m-3 font-medium text-md'><a href="http://" target="_blank" rel="noopener noreferrer">For you</a></li>
                         <li className='m-3 font-medium text-md'><a href="http://" target="_blank" rel="noopener noreferrer">Discover</a></li>
                         <li className='m-3 font-medium text-md'><a href="http://" target="_blank" rel="noopener noreferrer">Livestreams</a></li>
                         <li className='m-3 font-medium text-md'><a href="http://" target="_blank" rel="noopener noreferrer">Hire</a></li>
@@ -126,14 +126,13 @@ const Header = () => {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="recm-item">
+                                {/* <div className="recm-item">
                                     <span className='text-xs font-bold text-[#626161]'>Sort</span>
                                     <div className="flex items-center ">
                                         <p className='text-sm font-medium pr-1'>Recommended</p>
                                         <MdArrowDropDown />
                                     </div>
-
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

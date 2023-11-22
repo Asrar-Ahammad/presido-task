@@ -8,7 +8,6 @@ function App() {
   return (
     <>
     <div className="main relative overflow-hidden">
-
     <Header/>
     <BehanceList/>
     <Footer/>

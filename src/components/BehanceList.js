@@ -2,18 +2,29 @@ import React from 'react'
 import { behanceItem } from '../Data'
 import { AiFillFolderOpen } from 'react-icons/ai'
 
-const BehanceList = () => {
-    return (
-        <section>
-            <div className="container-fluid px-4">
+const BehanceList = ({filterState,setFilterState}) => {
+    const handleFilter = (category) => {
+        setFilterState(category)
+    }
 
-                <div className="grid md:grid-cols-3 lg:grid-cols-5  sm:grid-cols-2 gap-3 py-5">
+    const filteredCategory = filterState ? behanceItem.filter((f) =>
+        f.category === filterState) : behanceItem
+    return (
+        <section className='pt-56'>
+            <div className="container-fluid px-4">
+                {
+                    Array.from(new Set(behanceItem.map((b)=>
+                    b.category))).map((c)=>(
+                        <button onClick={()=>handleFilter(c)}>{c}</button>
+                    ))
+                }
+                <div className="grid md:grid-cols-3 lg:grid-cols-4  sm:grid-cols-2 gap-3 py-10">
                     {
-                        behanceItem.map((item) => (
+                        filteredCategory.map((item) => (
                             <div className="category-item cursor-pointer">
-                                <div className="cat-img relative overflow-hidden rounded-md">
+                                <div className="cat-img relative overflow-hidden rounded-md h-80">
                                     <div className="bg-overlay"></div>
-                                    <img src={item.featureImg} alt={item.featureImg} />
+                                    <img src={item.featureImg} alt={item.featureImg} className='h-full object-cover' />
                                     <div className="save-file flex items-center absolute cursor-pointer top-2 left-2 py-2 px-3 bg-black/50 rounded-full">
                                         <div className="s-icon text-white text-sm pr-1">
                                             <AiFillFolderOpen />
