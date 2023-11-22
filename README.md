@@ -20,6 +20,7 @@ This Behance clone project is an attempt to replicate the core features and func
 
 - **Category sorting:** Allows users to sign up, log in, and manage their profiles.
 - **Search functinality:** Allows user to search for the projects on the platform.
+- **Responsive:** Suitable to all device types.
 
 ## Installation
 
