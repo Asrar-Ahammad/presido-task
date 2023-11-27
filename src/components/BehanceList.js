@@ -29,7 +29,7 @@ const BehanceList = () => {
     const [filterCat, setFilter] = useState(null);
     const [visible, setVisible] = useState(false);
     const [defaultCat, setDefault] = useState('Recommended');
-    const [currentLikes, setCurrentLikes] = useState();
+
 
     const handleFilter = (category) => {
         setFilter(category)
